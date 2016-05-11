@@ -71,14 +71,15 @@ import { HeroService } from './hero.service';
 })
 export class AppComponent implements OnInit {
     title = 'Tour of Heroes';
-    heroes: Hero[] = [{ "id": 11, "name": "Mr. Nice" }];
+    heroes: Hero[] = [{ "id": 1, "name": "Mr. AN" }];
     selectedHero: Hero;
 
     constructor(private heroService: HeroService){
     }
 
     getHeroes(){
-        this.heroService.getHeroes()
+        //this.heroService.getHeroes()
+        this.heroService.getHeroesSlowly()
             .then(heroes => this.heroes = heroes);
     }
 

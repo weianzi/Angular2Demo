@@ -15,11 +15,12 @@ var AppComponent = (function () {
     function AppComponent(heroService) {
         this.heroService = heroService;
         this.title = 'Tour of Heroes';
-        this.heroes = [{ "id": 11, "name": "Mr. Nice" }];
+        this.heroes = [{ "id": 1, "name": "Mr. AN" }];
     }
     AppComponent.prototype.getHeroes = function () {
         var _this = this;
-        this.heroService.getHeroes()
+        //this.heroService.getHeroes()
+        this.heroService.getHeroesSlowly()
             .then(function (heroes) { return _this.heroes = heroes; });
     };
     AppComponent.prototype.ngOnInit = function () {
