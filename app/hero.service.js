@@ -16,13 +16,10 @@ var HeroService = (function () {
     HeroService.prototype.getHeroes = function () {
         return Promise.resolve(mock_heroes_1.HEROES);
     };
-    // See the "Take it slow" appendix
     HeroService.prototype.getHeroesSlowly = function () {
         return new Promise(function (resolve) {
             return setTimeout(function () { return resolve(mock_heroes_1.HEROES); }, 2000);
-        } // 2 seconds
-         // 2 seconds
-        );
+        });
     };
     HeroService.prototype.getHero = function (id) {
         return Promise.resolve(mock_heroes_1.HEROES).then(function (heroes) { return heroes.filter(function (hero) { return hero.id === id; })[0]; });

@@ -6,7 +6,7 @@
     "sourceMap": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
+    "removeComments": true,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
   },
@@ -16,3 +16,12 @@
     "typings/main.d.ts"
   ]
 }
+
+
+/*
+emitDecoratorMetadata/experimentalDecorators两个选项用于支持es7装饰器，这在angular中重度使用，所以必须为true。
+target是编译为es5，
+module是模块类型，这里是commonjs。
+removeComments顾名思义是去除所有的注释。
+sourceMap生成相关的.map文件，这里不生成。
+*/
